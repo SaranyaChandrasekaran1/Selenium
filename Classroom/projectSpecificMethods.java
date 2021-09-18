@@ -1,4 +1,4 @@
-package pageObjectModel;
+package PageObjectParallel;
 
 import java.time.Duration;
 
@@ -10,7 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class projectSpecificMethods {
-	public static ChromeDriver driver;
+	public ChromeDriver driver;
 	@BeforeMethod
    public void precondition() {
 	  WebDriverManager.chromedriver().setup();

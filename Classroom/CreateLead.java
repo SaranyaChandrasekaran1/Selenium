@@ -1,10 +1,15 @@
-package pageObjectModel;
+package PageObjectParallel;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CreateLead extends projectSpecificMethods {
 	
+	public CreateLead(ChromeDriver driver)
+	{
+		this.driver=driver;
+	}
 	
 	
 	public CreateLead entercompanyName() {
@@ -27,7 +32,7 @@ public class CreateLead extends projectSpecificMethods {
 	}
 	public ViewLeadPage clickSubmitButton() {
 	driver.findElement(By.className("smallSubmit")).click();
-return new ViewLeadPage();
+return new ViewLeadPage(driver);
 	}
 
 }
